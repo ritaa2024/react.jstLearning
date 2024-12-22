@@ -8,8 +8,11 @@ function App() {
   let [counter,setCounter ] = useState(15);
   const addValue= ()=>{
     console.log("added",Math.random())
-    counter = counter +1
-    setCounter(counter)
+    // prevCounter = prevCounter +1
+    setCounter( prevCounter =>prevCounter +1)
+    setCounter( prevCounter =>prevCounter +1)
+    setCounter( prevCounter =>prevCounter +1)
+
   }
 
   const removeValue= ()=>{
@@ -17,6 +20,7 @@ function App() {
     if(counter>0){
       counter = counter - 1
       setCounter(counter)
+
     }
   }
   return (
