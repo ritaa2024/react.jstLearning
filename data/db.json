@@ -1,0 +1,28 @@
+{
+    "product":[
+       {
+        "id":10001,
+        "name":"react course",
+        "price":29,
+        "in_stock":true
+       },
+       {
+        "id":10002,
+        "name":"node course",
+        "price":59,
+        "in_stock":true
+       },
+       {
+        "id":10003,
+        "name":"java course",
+        "price":59,
+        "in_stock":true
+       } ,
+       {
+        "id":10004,
+        "name":"python course",
+        "price":290,
+        "in_stock":false
+       }  
+    ]
+}
