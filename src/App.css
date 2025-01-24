@@ -70,13 +70,22 @@ button {
   color: #FFFFFF;
   cursor: pointer;
   padding: 10px;
+  
   font-size: 20px;
+
 }
 
+.filter{
+  display: flex;
+  justify-content: center;
+}
 button.onlyStock {
+  /* margin-left: 200px; */
   background-color: #0ca14f;
 }
 
 button.all {
+  margin-left: 200px;
+  
   background-color: #065ba0;
 }
