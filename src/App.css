@@ -89,3 +89,9 @@ button.all {
   
   background-color: #065ba0;
 }
+
+.error{
+  font-size: larger;
+  border-radius: 20px;
+  color: #a00620;
+}

@@ -1,13 +1,16 @@
 import  {  useState } from "react";
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "../../Hooks/useFetch";
+import Loading from "../assets/loading.gif";
 function ProductList() {
   // const [products, setProducts] = useState([]);
  
 
   const [url,setUrl]=useState("http://localhost:3000/product/")
   
-  const {data:products} = useFetch(url)
-  console.log(products);
+  const {data:products,loading,error} = useFetch(url)
+  // console.log(products);
+  // console.log(loading,"kkk")
+
 
 
   return (
@@ -17,7 +20,9 @@ function ProductList() {
    <button onClick={()=>setUrl("http://localhost:3000/product/")}>all</button>
    <button  onClick={()=>setUrl("http://localhost:3000/product?in_stock=true")}>In stock</button>
     </div>
-
+       {loading && <p className="loading"><img src={Loading} alt="" /></p>}
+       {error && <p className="error">{error}</p>}
+      
         {products && products.map((product)=>(
             <div className="card" key={product.id}>
             <p className="id">{product.id}</p>
